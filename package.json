@@ -1,0 +1,28 @@
+{
+  "name": "topoo",
+  "version": "1.0.0",
+  "description": "small web app for showing off catalog of pictures",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenkynolasco11/topoo.git"
+  },
+  "keywords": [
+    "catalog",
+    "pictures",
+    "topoo"
+  ],
+  "author": "J2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenkynolasco11/topoo/issues"
+  },
+  "homepage": "https://github.com/jenkynolasco11/topoo#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
