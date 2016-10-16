@@ -1,16 +1,17 @@
 doctype html
 html
 	head
-		link(rel='stylesheet' type='text/css' href='/static/styles/css/index.css')
+		link(rel='stylesheet' type='text/css' href='/static/styles/css/build/index.css')
 		title Topoo Novelty
 	body
-		//- testing purposes
-		//- figure
-		//- 	img(src='/static/img/'+pics[0])
-		//- 	figcaption Picture
-		for pic in pics
+		header
 			figure
-				img(src='/static/img/'+pic)
-				figcaption pictureg
-		//- unless !test
-			script(src="/localhost:35729/livereload.js")
+				img(class='logo' alt='company logo')
+		main
+			section(class='catalog')
+				.search-bar
+				for pic in pics
+					figure
+						img(style='background-image: url(/static/img/'+ pic + ');')
+						figcaption pictures
+		footer

@@ -1,12 +1,8 @@
 var readFilesSync = function(path){
-	// console.log('exported readfiles');
-	var data = [];
-
-	require('fs').readdir(path, function(err,files){
-		files.forEach( file => data.push(file) );
-	});
-
-	return data;
+	console.log('exported readfiles');
+	if(path) return require('fs').readdirSync(path);
+	
+	return '';
 };
 
 exports.readFilesSync = readFilesSync;
