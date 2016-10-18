@@ -1,19 +1,57 @@
 doctype html
 html
 	head
-		link(rel='stylesheet' type='text/css' href='/static/styles/css/build/index.css')
+		link(rel='stylesheet' type='text/css' href='../../static/styles/css/build/index.css')
 		title Topoo Novelty
 	body
 		header
 			figure
-				img(class='logo' alt='company logo')
+				img(alt='company logo').logo
 		main
-			section(class='catalog')
+			section.catalog
 				.search-bar
-					select
-						option(value='')
-				for pic in pics
-					figure
-						img(style='background-image: url(/static/img/'+ pic + ');')
-						figcaption pictures
+				.products-container
+					.category(data-category='category-x')
+						.title
+						.products
+							.item
+								.sku WP-Algo
+								.price 10.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+							.item
+								.sku WP-Algo-1
+								.price 120.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+							.item
+								.sku WP-Algo-3
+								.price 10.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+					.category(data-category='category-y')
+						.title
+						.products
+							.item
+								.sku WP-Algo-4
+								.price 10.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+							.item
+								.sku WP-Algo-algo
+								.price 10.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+							.item
+								.sku WP-Algo-7
+								.price 10.00
+								figure
+									img.product-image(src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blank_woman_placeholder.svg/2000px-Blank_woman_placeholder.svg.png')
+								p.description
+						//- sku, img, desc, price ->stub:select or add input qty
 		footer
