@@ -1,21 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
+img {
+  height: 100px;
+  width: 100px;
+}
+
 body {
-  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0;
+  background: #cecece;
+}
+
+body main {
+  font-family: 'Julius Sans One', 'Sans Serif';
+  margin: 0 auto;
+}
+
+body main .catalog {
+  margin: 0 auto;
+  padding: 2%;
+  background: #d3d3d3;
+  height: inherit;
+  width: 90%;
+}
+
+body main .catalog .products-container {
+  height: inherit;
+  width: 100%;
+}
+
+body main .catalog .products-container .title {
+  font-size: 1.4em;
+  font-weight: bold;
+  height: inherit;
+  width: 95%;
+  margin: 40px auto 20px;
+  border-bottom: 2px solid #555;
+  padding: 10px;
+}
+
+body main .catalog .products-container .products {
+  height: inherit;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body main .catalog .products-container .products .item {
+  padding: 20px;
+  margin: 4px;
+  display: inline-block;
+  background: #bbb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.4s linear;
+  -webkit-transition: box-shadow 0.4s linear;
+  height: 250px;
+  width: 200px;
+}
+
+body main .catalog .products-container .products .item:hover {
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 620px) {
+  body main .catalog .products-container .products .item {
+    height: 350px;
+    width: 260px;
+    margin: 10px auto;
+  }
+}
+
+body main .catalog .products-container .products .item .sku {
+  float: left;
+  font-weight: 600;
+}
+
+body main .catalog .products-container .products .item .price {
+  float: right;
+}
+
+body main .catalog .products-container .products .item figure {
+  margin: 20px 0;
   background: red;
 }
 
-body main figure {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  color: yellow;
-  font-size: white;
-  transition: background 1s ease-in;
+body main .catalog .products-container .products .item figure .product-image {
+  height: inherit;
+  width: 90%;
 }
 
-body main figure img {
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+@media screen and (max-width: 620px) {
+  body main .catalog .products-container .products .item figure {
+    margin: 30px 0px 10px;
+  }
+}
+
+body main .catalog .products-container .products .item .description {
+  float: left;
+  font-size: 8pt;
+  text-align: left;
+  margin: 5px;
 }
