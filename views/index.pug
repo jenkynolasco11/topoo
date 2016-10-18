@@ -6,10 +6,26 @@ html
 	body
 		header
 			figure
-				img(alt='company logo').logo
+				img(src='../../static/img/logo.png' alt='company logo').logo
 		main
 			section.catalog
-				.search-bar
+				nav.nav-bar
+					ul
+						li
+							a(href='#') Water Pipes
+						li
+							a(href='#') Bubblers
+						li
+							a(href='#') Hookahs
+						li
+							a(href='#') Pipes
+						li
+							a(href='#') Vaporizers
+						li
+							a(href='#') Accessories
+
+					.search-bar
+						input(type='text' placeholder='Search').search-filter
 				.products-container
 					.category(data-category='category-x')
 						.title Category-X
