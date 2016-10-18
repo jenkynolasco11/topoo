@@ -4,10 +4,24 @@ const STYLES = 'static/styles/'
 
 module.exports = function(grunt) {
 
-    'use strict'; 
+    'use strict';
     // Project configuration.
 
     grunt.initConfig({
+        pug : {
+    			compile  : {
+    				files : [{
+    					expand : true,
+    					cwd : 'views',
+    					src : ['*.pug'],
+    					dest : 'views/html',
+    					ext : '.html',
+    				}],
+    				options : {
+    					pretty : true,
+    				},
+    			},
+    		},
         sass : {
         	scss : {
         		files : [{
@@ -17,7 +31,7 @@ module.exports = function(grunt) {
         			dest : STYLES + 'css',
         			ext : '.css',
         		}],
-        	},	
+        	},
 
         	options : {
         		outputStyle : 'expanded',
@@ -34,7 +48,7 @@ module.exports = function(grunt) {
                     cwd : STYLES + 'css',
                     src : ['*.css'],
                     dest : STYLES + 'css/build',
-                    ext : '.css',                  
+                    ext : '.css',
                 }],
             },
         },
@@ -46,6 +60,10 @@ module.exports = function(grunt) {
             autoprefixer : {
                 files : [STYLES + 'css/*.css'],
                 tasks : ['autoprefixer:css'],
+            },
+            pug : {
+            	files : ['views/*.pug'],
+            	tasks : ['pug:compile'],
             },
             // connect : {
             //     files : [
@@ -72,12 +90,13 @@ module.exports = function(grunt) {
     });
 
   // Load the plugin that provides the "uglify" task.
-    
+
     // grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s)
-    grunt.registerTask('default', ['autoprefixer','sass',/*'connect',*/'watch']);
+    grunt.registerTask('default', ['pug','sass','autoprefixer',/*'connect',*/'watch']);
 };
