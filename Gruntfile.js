@@ -54,11 +54,11 @@ module.exports = function(grunt) {
         },
         watch : {
         	scss : {
-        		files : [STYLES + 'scss/*.scss'],
+        		files : ['./static/styles/scss/*.scss'],
         		tasks : ['sass:scss'],
         	},
             autoprefixer : {
-                files : [STYLES + 'css/*.css'],
+                files : ['./static/styles/css/*.css'],
                 tasks : ['autoprefixer:css'],
             },
             pug : {
