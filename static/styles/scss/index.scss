@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
->>>>>>> 63bf64774514a673262415afbc42bbe82a98f8f6
 $background-color : #cecece;
 
 @mixin hw($height : inherit, $width : inherit){
@@ -10,21 +7,6 @@ $background-color : #cecece;
 	width : $width;
 }
 
-<<<<<<< HEAD
-body {
-	padding: 0;
-	background : $background-color;
-	
-
-	main {
-		.catalog{
-			@include hw(100px, 100px);
-
-		}
-	}
-}
-//la TUYA CONIO
-=======
 img{
 	@include hw(100px,100px);
 }
@@ -89,7 +71,7 @@ body {
 							}
 						}
 					}
-				}			
+				}
 				.search-bar{
 					// float :left;
 					// Code something in here later...
@@ -184,4 +166,3 @@ body {
 		}
 	}
 }
->>>>>>> 63bf64774514a673262415afbc42bbe82a98f8f6

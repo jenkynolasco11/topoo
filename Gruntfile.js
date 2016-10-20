@@ -39,9 +39,9 @@ module.exports = function(grunt) {
         	},
         },
         autoprefixer : {
-            options : {
-                browsers : ['ie 10','opera 39', 'firefox 49', 'safari 10'],
-            },
+            // options : {
+            //     browsers : ['ie 10','opera 39', 'firefox 49', 'safari 10'],
+            // },
             css : {
                 files : [{
                     expand : true,
@@ -50,6 +50,10 @@ module.exports = function(grunt) {
                     dest : STYLES + 'css/build',
                     ext : '.css',
                 }],
+                options : {
+                    browsers : ['ie 10','opera 39', 'firefox 49', 'safari 10'],
+                    // cascade : false,
+                },
             },
         },
         watch : {
